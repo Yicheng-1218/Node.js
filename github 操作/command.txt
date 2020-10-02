@@ -1,0 +1,7 @@
+git add (file_name)  對某檔案進行git追蹤，filename可以換成"." 代表當前整個資料夾
+
+git commit -m "add code" 對當前修改輸出一個日誌，名為"add code"
+
+git branch -M main 設定一個分支叫做main
+
+git remote add origin https://github.com/Yicheng-1218/(projectname)  把已追蹤的檔案用個名子代稱(origin)，然後push到github的專案資料夾內(projectname)
