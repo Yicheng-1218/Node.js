@@ -22,7 +22,7 @@ app.post('/',(req,res)=>{
     if(id=='123' && pwd=='456')
     {
         app.use('/lang',router);
-        res.redirect('http://my-first-web-1.herokuapp/lang');
+        res.redirect('https://my-first-web-1.herokuapp/lang');
         
     }else{
         res.send('LOGIN FAILED');
