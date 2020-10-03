@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html style="height: 937px;">
+    <head>
+        <title>FIREBASE</title>
+        <meta charset="utf-8">
+        <link rel='stylesheet' href="./css/firebase.css">
+    </head>
+    <body>
+        <h1>Class Member</h1>
+        <div id='container'>    
+            
+            <form id='add-students-form'>
+                <input type="text" name='name' placeholder="std name">
+                <input type="text" name='age' placeholder="std age">
+                <input type="text" name="gender" placeholder="std gender">
+                <input id='btn' type="submit" value="submit" onclick="message()">
+            </form>
+            <table id='stu-table' cellpadding="10" border="1" width="100%">
+                <tr>
+                    <td>USERNAME</td>
+                    <td>AGE</td>
+                    <td>GENDER</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-firestore.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyDqIA0pH0zyMpS_ovkAWo1AoxOP5KNfIII",
+        authDomain: "test-d223c.firebaseapp.com",
+        databaseURL: "https://test-d223c.firebaseio.com",
+        projectId: "test-d223c",
+        storageBucket: "test-d223c.appspot.com",
+        messagingSenderId: "180419623325",
+        appId: "1:180419623325:web:2c8976addba777ed471774",
+        measurementId: "G-E75RQFCCN2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    const db = firebase.firestore();
+    </script>
+    <script src="./javascript/app.js"></script>
+</html>

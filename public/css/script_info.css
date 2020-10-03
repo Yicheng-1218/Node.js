@@ -1,0 +1,28 @@
+body{
+    background: rgb(75, 75, 75)
+}
+#head{
+    background:  #ff8800;
+    color: seashell;
+    text-align: center;
+    width: 90%;
+    float: center;
+    margin: 20px auto;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    height: 60px;
+    line-height: 60px;
+}
+#paper{
+    width: 1200px;
+    height: 600px;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    margin:100px auto;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(223, 223, 223 ,0.5);
+}
+img{
+    margin-top: 100px;
+    margin-left: 20px;
+}
