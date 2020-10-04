@@ -30,9 +30,6 @@ function renderStudents(doc){
     studentsTable.appendChild(tr);
 }
 
-function message(){
-    alert('請重整網頁更新顯示');
-}
 // getting data 
 db.collection('students').get().then(data => {
     data.docs.forEach(doc => {
@@ -65,5 +62,14 @@ form.addEventListener('submit', (e) => {
     //     gender: form.gender.value,
     //     age: form.age.value
     // });
+    form.name.value='';
+    form.gender.value='';
+    form.age.value='';
+    db.collection('students').get().then(data => {
+        data.docs.forEach(doc => {
+            renderStudents(doc);
+        });
+        window.location.reload();
+    });
     
 });

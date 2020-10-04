@@ -25,7 +25,7 @@ app.post('/',(req,res)=>{
         res.redirect('https://my-first-web-1.herokuapp.com/lang');
         
     }else{
-        res.send('LOGIN FAILED');
+        res.send('你是想看看故意打錯會怎樣嗎?');
     }
     
 })
