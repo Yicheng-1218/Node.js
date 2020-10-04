@@ -18,7 +18,7 @@ body{
     color: seashell;
     font-size: 20px;
     text-align: center;
-    margin-left: 30%;
+    margin-left: 20%;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -28,12 +28,12 @@ body{
         margin: auto;
         background: #333533; 
         border-radius: 25px;
-        height: 600px;
+        height: 500px;
         box-shadow: 5px 5px 0px #cfdbd5;
     }
     iframe{
         width: 350px;
-        height: 150px;
+        height: 180px;
         padding-top: 50px;
         padding-left: 15px;
 
@@ -43,7 +43,7 @@ body{
         background: rgb(30, 30, 30);
         height: 150px;
         width: 350px;   
-        padding-top: 15px;
+        padding-top: 5px;
         padding-left: 10px;
         border-radius: 20px;
         margin-left: 10px;
@@ -51,9 +51,10 @@ body{
         font-weight: bold;
         text-align: center;
         line-height: 30px;
+        font-size: 15px;
     }
     #s1{
-        height: 50px;
+        height: 30px;
     }
 }
 
@@ -68,7 +69,7 @@ body{
     }
     #text{
         color: seashell;
-        background: rgb(45, 45, 45);
+        background: rgb(30, 30, 30);
         height: 250px;
         width: 450px;   
         padding-top: 50px;
@@ -79,6 +80,7 @@ body{
         font-weight: bold;
         line-height: 50px;
         text-align: center;
+        font-size: 20px;
     }
     #container{
         width: 1200px;
@@ -95,7 +97,7 @@ body{
 
     }
     #link{
-        margin-left: 13%;
+        margin-left: 10%;
     }
     #s1{
         height: 100px;
