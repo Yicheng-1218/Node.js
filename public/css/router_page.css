@@ -52,9 +52,9 @@ html{
 }
 
 }
-@media(min-width:770px){
+@media(min-width:768px){
   #head{
-    line-height:250px;
+    line-height:300px;
     height: 300px;
   }
 }

@@ -10,14 +10,21 @@
         <div id="sidebar_left">sidebar_left</div>
         <div id="sidebar_right">sidebar_right</div>
         <div id="content">
-            <img src="https://i.imgur.com/zsfsQOn.png" height=300px width=400px>
+            <img src="https://i.imgur.com/zsfsQOn.png">
         </div>
         <div id="footer">footer</div>
         </div>
     </body>
     <style type="text/css">
+    @media(min-width: 280px){ 
+        img{
+            width: 100%;
+            height: 160px;
+            padding-top: 100px;
+        }
         #sitebody {
-            width:1000px;
+            width:100%;
+            height: 500px;
             margin:0 auto;
             font-size:20px;
         }
@@ -29,27 +36,27 @@
         }
         #sidebar_left{
             background-color:#FFECC9;
-            width:120px;
-            height:600px;
+            width:25%;
+            height:100%;
             text-align:center;
-            line-height:600px;
+            line-height:500px;
             float:left;
         }
         #sidebar_right{
             background-color:#FFECC9;
-            width:120px;
-            height:600px;
+            width:25%;
+            height:100%;
             text-align:center;
-            line-height:600px;
+            line-height:500px;
             float:right;
         }
         #content{
-            margin-left:120px;
-            margin-right:120px;
-            height:600px;
+            margin-left:25%;
+            margin-right:25%;
+            height:100%;
             background-color:#ffffff;
             text-align:center;
-            line-height:600px;
+            line-height:100%;
         }
         #footer{
             clear:both;
@@ -58,5 +65,55 @@
             text-align:center;
             line-height:100px;
         }
+    }
+    @media(min-width: 1540px){ 
+        img{
+            padding-top: 100px;
+            width: 90%;
+            height: 55%;
+        }
+        #sitebody {
+            width:50%;
+            height: 600px;
+            margin:0 auto;
+            font-size:20px;
+        }
+        #header {
+            background-color:#FFD4D4;
+            height:80px;
+            text-align:center;
+            line-height:80px;
+        }
+        #sidebar_left{
+            background-color:#FFECC9;
+            width:25%;
+            height:100%;
+            text-align:center;
+            line-height:600px;
+            float:left;
+        }
+        #sidebar_right{
+            background-color:#FFECC9;
+            width:25%;
+            height:100%;
+            text-align:center;
+            line-height:600px;
+            float:right;
+        }
+        #content{
+            margin-left:25%;
+            margin-right:25%;
+            height:100%;
+            background-color:#ffffff;
+            text-align:center;
+        }
+        #footer{
+            clear:both;
+            background-color:#FFD4D4;
+            height:100px;
+            text-align:center;
+            line-height:100px;
+        }
+    }
     </style>
 </html>
