@@ -23,12 +23,9 @@ function renderStudents(doc){
         let id = test.target.parentElement.getAttribute('data-id');
         console.log(id);
         db.collection('students').doc(id).delete();
-        db.collection('students').get().then(data => {
-            data.docs.forEach(doc => {
-                renderStudents(doc);
-            });
-            window.location.reload();
-        });
+        db.collection('students').get().then(
+            window.location.reload()
+        );
     });
     //
 
@@ -71,14 +68,11 @@ form.addEventListener('submit', (e) => {
         //     gender: form.gender.value,
         //     age: form.age.value
         // });
+        db.collection('students').get().then(
+            window.location.reload()
+        );
         form.name.value='';
         form.age.value='';
         form.gender.value='';
-        db.collection('students').get().then(data => {
-            data.docs.forEach(doc => {
-                renderStudents(doc);
-            });
-            window.location.reload();
-        });
     }
 });
