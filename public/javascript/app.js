@@ -72,7 +72,6 @@ form.addEventListener('submit', (e) => {
             _=>{
                 window.location.reload()
             }    
-            
         );
     }
 });
