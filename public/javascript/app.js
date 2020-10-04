@@ -68,15 +68,13 @@ form.addEventListener('submit', (e) => {
         //     gender: form.gender.value,
         //     age: form.age.value
         // });
-        db.collection('students').get().then(     
-            
+        db.collection('students').get().then(       
             data => {
                 data.docs.forEach(doc => {
-                    renderStudents(doc);
+                    console.log(doc.id);
                 });
-                window.location.reload()
-            },
-            
+                window.location.reload();
+            }
         );
     }
 });
