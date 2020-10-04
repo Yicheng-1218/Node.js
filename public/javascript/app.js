@@ -23,7 +23,12 @@ function renderStudents(doc){
         let id = test.target.parentElement.getAttribute('data-id');
         console.log(id);
         db.collection('students').doc(id).delete();
-        message();
+        db.collection('students').get().then(data => {
+            data.docs.forEach(doc => {
+                renderStudents(doc);
+            });
+            window.location.reload();
+        });
     });
     //
 
@@ -31,45 +36,48 @@ function renderStudents(doc){
 }
 
 // getting data 
-db.collection('students').get().then(data => {
-    data.docs.forEach(doc => {
-        renderStudents(doc);
+function get_data(){ 
+    db.collection('students').get().then(data => {
+        data.docs.forEach(doc => {
+            renderStudents(doc);
+        });
     });
-});
+}
+get_data();
 // 
 
 // add data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    db.collection('students').get().then(data=>{
-        let std_list=[];
-        data.docs.forEach(a=>{
-            std_list.push(a.id);
+    if(form.name.value==''||form.gender.value==''||form.age.value=='')
+    {
+        alert('不可有空白欄');
+    }else{
+        db.collection('students').get().then(data=>{
+            let std_list=[];
+            data.docs.forEach(a=>{
+                std_list.push(a.id);
+            })
+            index=1;
+            while(('student'+index) == std_list[index-1]){
+                index++;
+            }
+            let std_id='student'+index;
+            db.collection('students').doc(std_id).set({
+                name: form.name.value,
+                gender: form.gender.value,
+                age: form.age.value
+            })
         })
-        index=1;
-        while(('student'+index) == std_list[index-1]){
-            index++;
-        }
-        let std_id='student'+index;
-        db.collection('students').doc(std_id).set({
-            name: form.name.value,
-            gender: form.gender.value,
-            age: form.age.value
-        })
-    })
-    // db.collection('ClassA').doc(std_id).set({
-    //     name: form.name.value,
-    //     gender: form.gender.value,
-    //     age: form.age.value
-    // });
-    form.name.value='';
-    form.gender.value='';
-    form.age.value='';
-    db.collection('students').get().then(data => {
-        data.docs.forEach(doc => {
-            renderStudents(doc);
-        });
+        // db.collection('ClassA').doc(std_id).set({
+        //     name: form.name.value,
+        //     gender: form.gender.value,
+        //     age: form.age.value
+        // });
+        form.name.value='';
+        form.gender.value='';
+        form.age.value='';
+        get_data();
         window.location.reload();
-    });
-    
+    }
 });
