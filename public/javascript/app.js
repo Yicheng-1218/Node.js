@@ -23,9 +23,7 @@ function renderStudents(doc){
         let id = test.target.parentElement.getAttribute('data-id');
         console.log(id);
         db.collection('students').doc(id).delete();
-        db.collection('students').get().then(
-            window.location.reload()
-        );
+        window.location.reload();
     });
     //
 
