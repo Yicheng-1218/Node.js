@@ -74,8 +74,9 @@ form.addEventListener('submit', (e) => {
                 data.docs.forEach(doc => {
                     renderStudents(doc);
                 });
+                window.location.reload()
             },
-            window.location.reload()
+            
         );
     }
 });
