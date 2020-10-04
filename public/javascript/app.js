@@ -62,16 +62,12 @@ form.addEventListener('submit', (e) => {
                 gender: form.gender.value,
                 age: form.age.value
             })
+            window.location.reload();
         })
         // db.collection('ClassA').doc(std_id).set({
         //     name: form.name.value,
         //     gender: form.gender.value,
         //     age: form.age.value
         // });
-        db.collection('students').get().then( 
-            _=>{
-                window.location.reload()
-            }    
-        );
     }
 });
