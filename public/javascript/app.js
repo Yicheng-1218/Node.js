@@ -36,14 +36,11 @@ function renderStudents(doc){
 }
 
 // getting data 
-function get_data(){ 
-    db.collection('students').get().then(data => {
-        data.docs.forEach(doc => {
-            renderStudents(doc);
-        });
+db.collection('students').get().then(data => {
+    data.docs.forEach(doc => {
+        renderStudents(doc);
     });
-}
-get_data();
+});
 // 
 
 // add data
@@ -77,7 +74,11 @@ form.addEventListener('submit', (e) => {
         form.name.value='';
         form.gender.value='';
         form.age.value='';
-        get_data();
-        window.location.reload();
+        db.collection('students').get().then(data => {
+            data.docs.forEach(doc => {
+                renderStudents(doc);
+            });
+            window.location.reload();
+        });
     }
 });
