@@ -24,7 +24,7 @@ body{
 }
 @media(min-width:300px){
     #container{
-        width: 450px;
+        width: 400px;
         margin: auto;
         background: #333533; 
         border-radius: 25px;
@@ -32,8 +32,8 @@ body{
         box-shadow: 5px 5px 0px #cfdbd5;
     }
     iframe{
-        width: 400px;
-        height: 200px;
+        width: 350px;
+        height: 150px;
         padding-top: 50px;
         padding-left: 30px;
 
