@@ -18,13 +18,13 @@ body{
     color: seashell;
     font-size: 20px;
     text-align: center;
-    margin-left: 33%;
+    margin-left: 30%;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
 }
 @media(min-width:300px){
     #container{
-        width: 400px;
+        width: 380px;
         margin: auto;
         background: #333533; 
         border-radius: 25px;
@@ -35,7 +35,7 @@ body{
         width: 350px;
         height: 150px;
         padding-top: 50px;
-        padding-left: 30px;
+        padding-left: 20px;
 
     }
     #text{
@@ -46,7 +46,7 @@ body{
         padding-top: 15px;
         padding-left: 10px;
         border-radius: 20px;
-        margin-left: 50px;
+        margin-left: 20px;
         font-family: Arial, Helvetica, sans-serif;
         font-weight: bold;
         text-align: center;
