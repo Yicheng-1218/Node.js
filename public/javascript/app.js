@@ -46,7 +46,7 @@ db.collection('students').get().then(data => {
 // add data
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    if(form.name.value==''||form.gender.value==''||form.age.value=='')
+    if(form.name.value==''||form.age.value==''||form.gender.value=='')
     {
         alert('不可有空白欄');
     }else{
@@ -72,8 +72,8 @@ form.addEventListener('submit', (e) => {
         //     age: form.age.value
         // });
         form.name.value='';
-        form.gender.value='';
         form.age.value='';
+        form.gender.value='';
         db.collection('students').get().then(data => {
             data.docs.forEach(doc => {
                 renderStudents(doc);
