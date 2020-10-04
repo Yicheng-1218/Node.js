@@ -13,58 +13,151 @@ body{
     font-weight: bold;
     height: 60px;
 }
-#container{
-    width: 1300px;
-    color: seashell; 
-    background: rgb(45, 45, 45);
-    margin: 65px auto;
-    height: 600px;
-    border-radius: 100px;
-}
-#left,#right{
-    text-align: center;
-    line-height: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    width: 220px;
-    height: 200px;
-    margin-top: 150px;
+@media(min-width:280px){
+    #container{
+        width: 320px;
+        color: seashell; 
+        background: rgb(45, 45, 45);
+        margin: 5px auto;
+        height: 600px;
+        border-radius: 30px;
+    }
+    #circle{
+        border-radius: 50%;
+        background: gainsboro;
+        width: 40px;
+        height: 40px;
+        position: relative;
+        left: 140px;
+        top: 550px;
+        z-index: 1;
+    }
+    #cam{
+        width: 150px;
+        height: 10px;
+        background: gainsboro;
+        border-radius: 50px;
+        position: relative;
+        left: 85px;
+        top: -20px;
+    }
+    #desktop{
+        border-radius: 30px;
+        width: 280px;
+        height: 480px;
+        position: relative;
+        left: 20px;
+        
+    }
+    #left,#right{
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    #p1,#p2{
+        width: 120px;
+        height: 120px;
+    }
+    #left{
+        top: -220px;
+        left: 100px;
+        
+    }
+    #pp1{
+        width: 300px;
+        position: relative;
+        left: -20px;
+    }
+    #pp2{
+        position: relative;
+        left: 35px;
+    }
+    #right{
+        top: -650px;
+        left: 100px;
+        
+    }
     
 }
-#right{
-    float: right;
-    margin-right: 200px;
-    margin-top: 160px;
-    line-height: 40px;
-}
-#left{
-    float: left;
-    margin-left: 220px;
-}
-#content{
-    background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
-    margin-left: 200px;
-    margin-right: 340px;
-    height: 500px;
-    width: 1000px;
-    border-radius: 10px;
-}
-#circle{
-    border-radius: 50%;
-    float: left;
-    background: gainsboro;
-    width: 60px;
-    height: 60px;
-    margin-top: 270px;
-    margin-left: 70px;
-}
-#cam{
-    width: 20px;
-    height: 200px;
-    background: gainsboro;
-    border-radius: 50px;
-    float: right;
-    margin-top: 200px;
-    margin-right: 50px;
+@media(min-width:1336px){
+    
+    #container{
+        width: 1300px;
+        color: seashell; 
+        background: rgb(45, 45, 45);
+        margin: 65px auto;
+        height: 600px;
+        border-radius: 100px;
+    }
+    #left,#right{
+        text-align: center;
+        line-height: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        width: 220px;
+        height: 200px;
+        
+        
+    }
+    #right{
+        float: right;
+        margin-right: 300px;
+        position: relative;
+        line-height: 40px;
+        z-index: 1;
+        top: -120px;
+        left: -20px;
+    }
+    #left{
+        float: left;
+        margin-left: 325px;
+        z-index: 1;
+        position: relative;
+        top: -130px;
+        left: -10px;
+    }
+    #content{
+        background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+        position: relative;
+        height: 500px;
+        width: 1050px;
+        border-radius: 10px;
+        z-index: 0;
+        top: -210px;
+        left: 150px;
+    }
+    #circle{
+        border-radius: 50%;
+        background: gainsboro;
+        width: 60px;
+        height: 60px;
+        position: relative;
+        top: 250px;
+        left: 50px;
+        z-index: 1;  
+    }
+    #cam{
+        width: 20px;
+        height: 200px;
+        background: gainsboro;
+        border-radius: 50px;
+        position: relative;
+        left: 1250px;
+        top: 120px;
+    }
+    #desktop{
+        display: none;
+    }
+    #p1,#p2{
+        width: 250px;
+        height: 250px;
+    }
+    #pp2{
+        left: 15px;
+    }
+    #pp1{
+        left: -30px;
+    }
 }
