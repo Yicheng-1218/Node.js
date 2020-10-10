@@ -23,7 +23,7 @@ function renderStudents(doc){
         let id = test.target.parentElement.getAttribute('data-id');
         console.log(id);
         db.collection('students').doc(id).delete();
-        window.location.reload();
+        alert("重整網頁更新顯示");
     });
     //
 
@@ -60,7 +60,7 @@ form.addEventListener('submit', (e) => {
                 gender: form.gender.value,
                 age: form.age.value
             })
-            window.location.reload();
+            alert("重整網頁更新顯示");
         })
         // db.collection('ClassA').doc(std_id).set({
         //     name: form.name.value,
